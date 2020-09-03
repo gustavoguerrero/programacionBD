@@ -16,6 +16,9 @@ public class PrincipalJFrame extends javax.swing.JFrame {
      */
     public PrincipalJFrame() {
         initComponents();
+        
+        this.setSize(800,500);
+        
     }
 
     /**
@@ -27,52 +30,74 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuArticulo = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuSalir = new javax.swing.JMenuItem();
+        jDesktopPane2 = new javax.swing.JDesktopPane();
+        jDesktopPanePrincipal = new javax.swing.JDesktopPane();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenuMantenimiento = new javax.swing.JMenu();
+        jMenuArticulos = new javax.swing.JMenuItem();
+        jMenuSalir = new javax.swing.JMenu();
+
+        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
+        jDesktopPane2.setLayout(jDesktopPane2Layout);
+        jDesktopPane2Layout.setHorizontalGroup(
+            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane2Layout.setVerticalGroup(
+            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Articulos");
-
-        jMenuArticulo.setText("jMenuItem1");
-        jMenuArticulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuArticuloActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuArticulo);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Sair");
-
-        jMenuSalir.setText("jMenuItem1");
-        jMenu2.add(jMenuSalir);
-
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jDesktopPanePrincipalLayout = new javax.swing.GroupLayout(jDesktopPanePrincipal);
+        jDesktopPanePrincipal.setLayout(jDesktopPanePrincipalLayout);
+        jDesktopPanePrincipalLayout.setHorizontalGroup(
+            jDesktopPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 407, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jDesktopPanePrincipalLayout.setVerticalGroup(
+            jDesktopPanePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 279, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jDesktopPanePrincipal, java.awt.BorderLayout.CENTER);
+
+        jMenuMantenimiento.setText("Mantenimiento");
+
+        jMenuArticulos.setText("Articulos");
+        jMenuArticulos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuArticulosActionPerformed(evt);
+            }
+        });
+        jMenuMantenimiento.add(jMenuArticulos);
+
+        jMenuBar2.add(jMenuMantenimiento);
+
+        jMenuSalir.setText("Salir");
+        jMenuSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSalirActionPerformed(evt);
+            }
+        });
+        jMenuBar2.add(jMenuSalir);
+
+        setJMenuBar(jMenuBar2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuArticuloActionPerformed
+    private void jMenuArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuArticulosActionPerformed
+           // TODO add your handling code here:
+           frmArticulo v1= new frmArticulo();
+           jDesktopPanePrincipal.add(v1);
+           v1.setVisible(true); 
+    }//GEN-LAST:event_jMenuArticulosActionPerformed
+
+    private void jMenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuArticuloActionPerformed
+    }//GEN-LAST:event_jMenuSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,10 +136,11 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuItem jMenuArticulo;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuSalir;
+    private javax.swing.JDesktopPane jDesktopPane2;
+    private javax.swing.JDesktopPane jDesktopPanePrincipal;
+    private javax.swing.JMenuItem jMenuArticulos;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenu jMenuMantenimiento;
+    private javax.swing.JMenu jMenuSalir;
     // End of variables declaration//GEN-END:variables
 }
